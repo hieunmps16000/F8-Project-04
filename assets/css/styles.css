@@ -4,6 +4,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -851,18 +852,12 @@ button {
     width: 131px;
 }
 
-.pricing__switch-input:checked
-    + .pricing__switch-label
-    .pricing__switch-value:nth-child(2) {
+.pricing__switch-input:checked + .pricing__switch-label .pricing__switch-value:nth-child(2) {
     color: #fff;
 }
 
-.pricing__switch-input:checked
-    + .pricing__switch-label
-    .pricing__switch-value:nth-child(1),
-.pricing__switch-input:not(:checked)
-    + .pricing__switch-label
-    .pricing__switch-value:nth-child(2) {
+.pricing__switch-input:checked + .pricing__switch-label .pricing__switch-value:nth-child(1),
+.pricing__switch-input:not(:checked) + .pricing__switch-label .pricing__switch-value:nth-child(2) {
     color: #ff5b2e;
 }
 
