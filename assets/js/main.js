@@ -6,6 +6,7 @@ const pcMenu = $('#pc-menu');
 const mobileMenu = $('#mobile-menu');
 const mobileHeader = $('.mobile-header');
 const menuOverlay = $('.menu-overlay');
+const menuCloseBtn = $('.menu-close__btn');
 
 
 menuToggle.addEventListener('click', () => {
@@ -13,6 +14,10 @@ menuToggle.addEventListener('click', () => {
 });
 
 menuOverlay.addEventListener('click', () => {
+    mobileHeader.classList.remove('mobile-header--active');
+});
+
+menuCloseBtn.addEventListener('click', () => {
     mobileHeader.classList.remove('mobile-header--active');
 });
 

@@ -154,6 +154,7 @@ button {
     display: flex;
     align-items: center;
     column-gap: 36px;
+    text-transform: capitalize;
 }
 
 .header-action__link {
@@ -266,6 +267,7 @@ button {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1;
+    text-transform: capitalize;
 }
 
 .hero-list-item__skeleton {
@@ -293,6 +295,7 @@ button {
     font-size: 6.6rem;
     font-weight: 800;
     line-height: 1.15;
+    text-transform: capitalize;
 }
 
 .hero__row {
@@ -331,7 +334,7 @@ button {
 
 .about__heading,
 .about__desc {
-    max-width: 431px;
+    width: 431px;
 }
 
 .about__list {
@@ -497,7 +500,8 @@ button {
 }
 
 .about__content-desc {
-    max-width: 511px;
+    width: 511px;
+    max-width: 100%;
     margin-bottom: 52px;
 }
 
@@ -525,7 +529,6 @@ button {
     position: relative;
     display: flex;
     align-items: center;
-    column-gap: 10px;
     padding-bottom: 10px;
 }
 
@@ -534,6 +537,7 @@ button {
 }
 
 .tab__title {
+    margin-left: 10px;
     color: #48496a;
     font-family: Sora;
     font-size: 1.8rem;
