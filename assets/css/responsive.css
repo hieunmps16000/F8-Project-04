@@ -206,6 +206,26 @@
         padding: 40px;
     }
 
+    .menu-drawer .header-action {
+        margin-top: 48px;
+        display: block;
+    }
+
+    .header-action__btn,
+    .header-action__link {
+        --height: 48px;
+        min-width: 98px;
+        display: block;
+        line-height: var(--height);
+        text-align: center;
+    }
+
+    .header-action__btn {
+        margin-top: 12px;
+        background: #000958;
+        color: #fff;
+    }
+
     .hero,
     .about,
     .staff,
@@ -354,6 +374,10 @@
 
     .review-item__quote {
         width: 100%;
+    }
+
+    .review__control {
+        display: none;
     }
 
     .staff__list {

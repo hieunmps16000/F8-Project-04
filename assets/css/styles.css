@@ -5,6 +5,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -45,6 +46,7 @@ button {
     min-width: 118px;
     line-height: var(--height);
     font-weight: 500;
+    text-transform: capitalize;
     border-radius: 999px;
     outline: none;
     color: #ff5b2e;
@@ -77,6 +79,21 @@ button {
     box-shadow: 4px 3px 10px -1px rgba(191, 41, 0, 0.4);
 }
 
+.clip-text {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+    -webkit-line-clamp: 3;
+}
+
 .container {
     width: 1170px;
     max-width: calc(100% - 48px);
@@ -95,6 +112,7 @@ button {
     font-family: Sora;
     font-size: 1.6rem;
     font-weight: 600;
+    text-transform: capitalize;
     line-height: 1;
 }
 
@@ -102,6 +120,7 @@ button {
     color: #000958;
     font-size: 5.2rem;
     font-weight: 700;
+    text-transform: capitalize;
     line-height: 1.19;
 }
 
@@ -162,6 +181,12 @@ button {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1;
+    user-select: none;
+}
+
+.header-action__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .header-action__btn {
@@ -318,6 +343,7 @@ button {
     line-height: 1;
     text-decoration: underline;
     text-underline-offset: 2px;
+    user-select: none;
 }
 
 /* About */
@@ -365,6 +391,7 @@ button {
     color: #48496a;
     font-size: 1.8rem;
     font-weight: 500;
+    text-transform: capitalize;
     line-height: 1;
     white-space: nowrap;
 }
@@ -620,6 +647,7 @@ button {
     color: #000958;
     font-size: 2.2rem;
     font-weight: 600;
+    text-transform: capitalize;
     line-height: 1;
 }
 
@@ -649,7 +677,14 @@ button {
     font-family: Sora, sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
+    text-transform: capitalize;
     line-height: 1;
+    transition: 0.25s;
+}
+
+.service-item__more:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .service-item__more::after {
@@ -686,6 +721,14 @@ button {
 
 .service__cta {
     min-width: 214px;
+}
+
+.service__cta:hover,
+.staff__cta:hover,
+.blog__cta:hover,
+.pricing-item__btn:hover {
+    background: #ff5b2e;
+    color: #fff;
 }
 
 /* Staff */
@@ -787,6 +830,7 @@ button {
     color: #656689;
     font-size: 1.4rem;
     font-weight: 400;
+    text-transform: capitalize;
     line-height: 1;
 }
 
@@ -965,6 +1009,10 @@ button {
     content: url(../img/icons/pricing-check.svg);
 }
 
+.pricing-item__item.active::before {
+    opacity: 0.4;
+}
+
 /* Review */
 .review {
     padding: 53px 0;
@@ -1065,6 +1113,7 @@ button {
     font-family: Sora;
     font-size: 1.8rem;
     font-weight: 600;
+    text-transform: capitalize;
     line-height: 1;
 }
 
@@ -1283,10 +1332,20 @@ button {
     border-radius: 50%;
     background: #fff;
     color: #000958;
+    transition: 0.25s;
+}
+
+.social__item svg {
+    opacity: 0.7;
 }
 
 .social__item:hover {
-    opacity: 0.9;
+    background: #000958;
+    color: #fff;
+}
+
+.social__item:hover svg {
+    opacity: 1;
 }
 
 .footer__right {
@@ -1304,7 +1363,8 @@ button {
     margin-top: 14px;
 }
 
-.footer__link {
+.footer__link,
+.footer__text {
     color: #656689;
     font-size: 1.4rem;
     font-weight: 400;
